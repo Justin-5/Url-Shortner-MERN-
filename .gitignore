@@ -1,0 +1,31 @@
+# Dependencies
+# Ignore the node_modules directory in both frontend and backend
+/BACKEND/node_modules/
+/FRONTEND/node_modules/
+
+# Environment Variables
+# Ignore all .env files in the backend to keep secrets safe
+/BACKEND/.env
+/BACKEND/.env.*
+
+# It's also good practice to ignore any potential .env files in the frontend
+/FRONTEND/.env
+/FRONTEND/.env.*
+
+# Production build output
+/FRONTEND/dist/
+/BACKEND/dist/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
