@@ -4,7 +4,7 @@ import {cookieOptions} from "../config/config.js"
 
 export const register_user=wrapAsync(async (req, res) => {
     const {name, email, password} = req.body
-    const token=await registerUser(name, email, password)
+    const {token,user}=await registerUser(name, email, password)
     res.user=user
     res.cookie("accessToken", token, cookieOptions)
     res.status(200).json({message: "User registered successfully"  })
