@@ -26,7 +26,7 @@ const RegisterForm = ({state}) => {
     setError('');
     
     try {
-       await registerUser(name, password, email);
+      const data = await registerUser(name, password, email);
       setLoading(false);
       dispatch(login(data.user))
       navigate({to:"/dashboard"})
